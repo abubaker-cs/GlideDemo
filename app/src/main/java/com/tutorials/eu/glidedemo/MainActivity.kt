@@ -21,12 +21,16 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
 
-        // Load the image to the ImageView with simple options.
+        /**
+         * Default Options
+         */
         Glide.with(this)
             .load(image) // A new request builder for loading a Drawable using the given model.
             .into(binding.imageOne) // Sets the ImageView the resource will be loaded into
 
-        // Load the image to the ImageView with some more params.
+        /**
+         * Additional Settings
+         */
         Glide.with(this)
             .load(image)
             .fitCenter()
@@ -35,7 +39,9 @@ class MainActivity : AppCompatActivity() {
             .placeholder(R.drawable.img_placeholder)
             .into(binding.imageTwo)
 
-        // Load the image to the ImageView with custom size defined at runtime.
+        /**
+         * Custom Size
+         */
         Glide.with(this)
             // To check the error you can change the link by adding some char
             .load("https://cdn.pixabay.com/photo/2018/05/03/21/49/android-3372580_960_720.png")
